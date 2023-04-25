@@ -18,6 +18,6 @@ export const EmployeeModel = mongoose.model('Employee', EmployeeSchema);
 export const getEmployees = () => EmployeeModel.find();
 export const getEmployeeById = (id: String) => EmployeeModel.findById(id);
 export const createEmployee = (values: Record<string, any>) => new EmployeeModel(values).save().then((employee) => employee.toObject());
-export const updateEmployee = (id: String, values: Record<string, any>) => EmployeeModel.findByIdAndUpdate(id, values);
-export const deleteEmployee = (id: String) => EmployeeModel.findByIdAndDelete(id);
+export const updateEmployeeById = (id: String, values: Record<string, any>) => EmployeeModel.findByIdAndUpdate(id, values);
+export const deleteEmployeeById = (id: String) => EmployeeModel.findByIdAndDelete(id);
 
