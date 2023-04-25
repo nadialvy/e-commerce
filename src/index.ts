@@ -24,7 +24,6 @@ server.listen(8000, () => {
 })
 
 const MONGO_URL = "mongodb+srv://aksaamerta:nadia123@cluster0.eic04nq.mongodb.net/?retryWrites=true&w=majority"
-
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);
 mongoose.connection.on('error', (error: Error) => console.log(error));
